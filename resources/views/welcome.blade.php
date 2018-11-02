@@ -69,15 +69,17 @@
                 <div class="top-right links">
                     @auth
                         <a href="{{ url('/home') }}">Home</a>
+                        <a href="{{ route('contactForm') }}">Contact</a>
+                        <a href="{{ route('about') }}">About</a>
                     @else
                         <a href="{{ route('login') }}">Login</a>
-
+                        <a href="{{ route('contactForm') }}">Contact</a>
+                        <a href="{{ route('about') }}">About</a>
                         @if (Route::has('register'))
                             <a href="{{ route('register') }}">Register</a>
                         @endif
                     @endauth
-                        <a href="{{ route('contactForm') }}">Contact</a>
-                        <a href="{{ route('about') }}">About</a>
+
 
 
                 </div>
@@ -86,6 +88,7 @@
             <div class="content">
                 <div class="title m-b-md">
                     Laravel
+
                 </div>
 
                 <div class="links">
