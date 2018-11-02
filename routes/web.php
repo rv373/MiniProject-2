@@ -14,7 +14,9 @@
 Route::get('/', function () {
     return view('welcome');
 });
-
+Route::get('/contactForm', 'HomeController@contactForm')->name('contactForm');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+
