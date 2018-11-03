@@ -27,7 +27,7 @@ class UserTest extends TestCase
         $user->save();
 
         $user = User::latest()->first();
-        //echo $user->name;
+        echo $user->name;
         $this->assertEquals("Keith William", $user->name, "Inserting Success");
 
     }
