@@ -14,19 +14,21 @@ class UserTest extends TestCase
      *
      * @return void
      */
-    public function testExample()
+    public function testCreateUser()
     {
-        $user = new User(["suzy kaun", "suzy@yahoo.com","secret"]);
+        //$user = new User(["suzy kaun", "suzy@yahoo.com","secret"]);
         $userData = array(
-            'name'  =>  'John Doe1',
-            'email'     =>  'jdoe1@njit.com',
-            'password'  =>  'J0doe'
+            'name'  =>  'Keith William',
+            'email'     =>  'kwilliam@njit.edu',
+            'password'  =>  'kwill'
 
         );
         $user = new User($userData);
         $user->save();
 
-        $this->assertEquals(7, $user->id, "Inserting Success");
+        $user = User::latest()->first();
+        //echo $user->name;
+        $this->assertEquals("Keith William", $user->name, "Inserting Success");
 
     }
 }
