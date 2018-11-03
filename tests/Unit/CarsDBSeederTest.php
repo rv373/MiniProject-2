@@ -10,11 +10,7 @@ use App\Car;
 
 class CarsDBSeederTest extends TestCase
 {
-    /**
-     * A basic test example.
-     *
-     * @return void
-     */
+
     public function testCarsDBSeeder()
     {
 
