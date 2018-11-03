@@ -12,13 +12,13 @@ class UsersTableSeeder extends Seeder
     public function run()
     {
 
-        /*factory(App\User::class, 50)->create()->each(function ($u) {
+        factory(App\User::class, 50)->create()->each(function ($u) {
             //$u->posts()->save(factory(App\Post::class)->make());
-        });*/
-        DB::table('users')->insert([
+        });
+        /*DB::table('users')->insert([
             'name' => str_random(10),
             'name' => str_random(10).'@gmail.com',
             'password' => bcrypt('secret'),
-        ]);
+        ]);*/
     }
 }
